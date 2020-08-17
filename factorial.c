@@ -1,22 +1,24 @@
 #include<stdio.h>
-#include<conio.h>
+
 int main()
-   { 
-    int i,n;
-    printf("Enter the number\n\n");
-    scanf("%d",&n);
-    long int factorial=1;
-    if (n <0)
-      {
-      	printf("Factorial of negative number is not possible\n\n");
+ {
+ 	int num,factorial=1;
+ 	printf("Enter the number: \n");
+ 	scanf("%d", &num);
+ 	
+ 	if(num==1)
+ 	 {
+ 	 	printf("Factorial of %d is %d", num,factorial);
 	  }
-	  else
-	    {
-	    	for(i=1;i<=n;i++)
-	    	{
-	    	factorial=factorial*i;
-	        }
-	    	printf("Factorial of of the integer =%d",factorial);
+	else
+	  {
+	  	while(num!=1)
+	  	 {
+	  	 	factorial=factorial*num;
+	  	 	num--;
+		   }
+		printf("Factorial of %d is %d", num, factorial);   
 		}
-    return 0;
-}
+		
+	return 0;	  
+ }
